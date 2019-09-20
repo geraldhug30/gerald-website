@@ -6,15 +6,13 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-dotenv.config();
 const app = express();
 
 //Mongoose db
-mongoose.connect(process.env.MONGO_URI, { 
-	useUnifiedTopology: true, 
-	useNewUrlParser: true 
-})
-.then(() => console.log('DB is connected'));
+mongoose.connect('mongodb+srv://admin-gerald:Arvato123!@cluster0-z6aus.mongodb.net/wedding', {
+   useNewUrlParser: true,
+   useUnifiedTopology: true
+ }).then(() => console.log('DB is connected'));
 
 // Check error
 mongoose.connection.on('error', err => {
