@@ -49,5 +49,5 @@ app.listen(process.env.PORT || 3000, err => {
 	if(err){
 		console.log(err);
 	}
-	console.log('app is running')
+	console.log('app is running' + 3000);
 })
