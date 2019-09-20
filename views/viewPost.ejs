@@ -1,0 +1,10 @@
+<div class="container-fluid text-c">
+    <% message.forEach( value => { %>
+        <div class="container">
+            <h3><%= value.title %></h3>
+            <p><%= value.nameFrom %></p>
+            <p><%= value.content %></p>
+        </div>
+        <hr>
+    <% }) %>
+</div>
